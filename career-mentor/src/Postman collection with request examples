@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "14fb7eba-0131-494a-a90f-2256d11f7458",
+		"name": "My Career Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14754101"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "alam",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qwerty",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "alamfahad13665@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "alam",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "qwerty",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "alamfahad13665@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"user\": {\r\n        \"id\": 2,\r\n        \"username\": \"alam\",\r\n        \"email\": \"alamfahad13665@gmail.com\"\r\n    },\r\n    \"token\": \"74847649ba1c9981a250de7116a275817266eab810624a22a0b4fbbe377b774f\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"b9feea09b6aefbbd26e817dad7c9279673c1460712452074ce1b72ee897cf770\",\r\n    \"username\": \"alam\",\r\n    \"password\": \"qwerty\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"b9feea09b6aefbbd26e817dad7c9279673c1460712452074ce1b72ee897cf770\",\r\n    \"username\": \"alam\",\r\n    \"password\": \"qwerty\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"expiry\": \"2023-06-25T17:17:12.751758Z\",\r\n    \"token\": \"75d0c2091cf7e068f4d44824cda9dbda676e2c8c448429e227b0af9c7ad5a26e\",\r\n    \"user\": {\r\n        \"username\": \"alam\"\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Score",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 75d0c2091cf7e068f4d44824cda9dbda676e2c8c448429e227b0af9c7ad5a26e",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"field1\": \"f8d71b3cf00752d81a847dbb99153859f8576c74a06ec8a9df681f4518b41ecb\",\r\n    \"field2\": \"alam\",\r\n    \"score\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/scores/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"scores",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Score",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 75d0c2091cf7e068f4d44824cda9dbda676e2c8c448429e227b0af9c7ad5a26e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"field1\": \"f8d71b3cf00752d81a847dbb99153859f8576c74a06ec8a9df681f4518b41ecb\",\r\n    \"field2\": \"alam\",\r\n    \"score\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/scores/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"scores",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"id\": 1,\r\n    \"field1\": \"f8d71b3cf00752d81a847dbb99153859f8576c74a06ec8a9df681f4518b41ecb\",\r\n    \"field2\": \"alam\",\r\n    \"score\": 100.0,\r\n    \"user\": 2\r\n}"
+				}
+			]
+		}
+	]
+}

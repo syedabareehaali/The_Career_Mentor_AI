@@ -1,0 +1,7 @@
+django-rest-knox
+django-cors-headers
+markdown
+django-filter
+djangorestframework
+Django
+joblib

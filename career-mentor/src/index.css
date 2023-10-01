@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animation-container {
+  position: relative;
+  white-space: nowrap;
+  animation: slideLeft 50s linear infinite;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
+.animation-image {
+  width: 100%;
+  height: 700px;
+  margin-right: -4px;
+  display: inline-block;
+}
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  background-color: aliceblue;
+}
